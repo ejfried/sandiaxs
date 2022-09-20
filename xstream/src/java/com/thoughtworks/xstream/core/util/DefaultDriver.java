@@ -12,7 +12,7 @@ package com.thoughtworks.xstream.core.util;
 
 import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
 import com.thoughtworks.xstream.io.naming.NameCoder;
-import com.thoughtworks.xstream.io.xml.MXParserDriver;
+import com.thoughtworks.xstream.io.xml.Xpp3Driver;
 
 
 /**
@@ -26,9 +26,9 @@ import com.thoughtworks.xstream.io.xml.MXParserDriver;
  */
 public final class DefaultDriver {
     public static HierarchicalStreamDriver create() {
-        return new MXParserDriver();
+        return new Xpp3Driver();
     }
     public static HierarchicalStreamDriver create(NameCoder coder) {
-        return new MXParserDriver(coder);
+        return new Xpp3Driver(coder);
     }
 }
