@@ -27,3 +27,14 @@ The complete source for XStream is bundled in the -src archive.  This includes:
 * Hibernate Module [xstream-hibernate]
 * Website [xstream-distribution]
 
+## About this fork
+
+This is trunk of the XStream repo at
+https://github.com/x-stream/xstream as of 9/20/22. It includes the
+patches from pull request https://github.com/x-stream/xstream/pull/299
+which the original report
+https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=49858 says fixed
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40151 .
+
+I've also made changes to DefaultDriver.java to switch the default XML
+parser back to Xpp3, to make the change as minimal as possible.
